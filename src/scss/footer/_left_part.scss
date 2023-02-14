@@ -1,0 +1,135 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+@import "../utils/templates";
+
+/*left part*/
+.footer__info {
+  color: $colorTextFooter;
+  margin: 30px 0 0 10px;
+  @include onTablet {
+    margin: 0 0 0 20px;
+  }
+  @include onDesctop {
+    margin: 0;
+  }
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  @include onTablet {
+    align-items: flex-start;
+  }
+  img {
+    padding-right: 5px;
+    width: 55px;
+    height: 57px;
+    margin: 0;
+    @include onTablet {
+      width: 65px;
+      height: 72px;
+    }
+    @include onDesctop {
+      width: 73px;
+      height: 81px;
+      padding: 0;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-family: "SofiaSans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    color: $colorTextFooter;
+    @include onTablet {
+      font-size: 25px;
+    }
+    @include onDesctop {
+      font-size: 38px;
+    }
+    span {
+      font-size: 19px;
+      @include onTablet {
+        font-size: 20px;
+      }
+      @include onDesctop {
+        font-size: 27px;
+      }
+    }
+  }
+}
+
+.footer__info__row {
+  display: flex;
+  margin-top: 21px;
+  @include onTablet {
+    margin-top: 0;
+  }
+}
+
+.footer__nav {
+  @include onTablet {
+    margin-top: 30px;
+  }
+  @include onDesctop {
+    margin-top: 30px;
+  }
+}
+.footer__nav__list {
+  font-size: 14px;
+  line-height: 1.35;
+  @include onTablet {
+    font-size: 20px;
+  }
+  @include onDesctop {
+    font-size: 20px;
+  }
+  li {
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    &:last-child {
+      margin-top: 27px;
+      display: flex;
+    }
+  }
+}
+
+.footer__nav__link {
+  color: $colorTextFooter;
+  &:hover {
+    color: $backgroundColor;
+  }
+}
+
+.time__work {
+  font-size: 14px;
+  line-height: 1.35;
+  margin: 48px 0 0 114px;
+  @include onTablet {
+    margin: 75px 0 0 90px;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  @include onDesctop {
+    font-size: 20px;
+    margin: 75px 0 0 160px;
+  }
+  p {
+    span {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 5px;
+      @include onTablet {
+        font-size: 20px;
+        line-height: 23px;
+      }
+      @include onDesctop {
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+  }
+}

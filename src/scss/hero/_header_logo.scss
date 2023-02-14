@@ -1,0 +1,50 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
+.logo {
+  display: flex;
+
+  &__img {
+    width: 33.39px;
+    height: 34.67px;
+    padding-right: 5px;
+
+    @include onTablet {
+      width: 50px;
+      height: 52px;
+    }
+
+    @include onDesctop {
+      width: 77.57px;
+      height: 80.56px;
+    }
+  }
+
+  &__text {
+    font-family: "SofiaSans";
+
+    @include onTablet {
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    @include onDesctop {
+      font-size: 27px;
+      line-height: 1.4;
+    }
+
+    span {
+      font-size: 17px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      @include onTablet {
+        font-size: 24px;
+      }
+
+      @include onDesctop {
+        font-size: 38px;
+        line-height: 53px;
+      }
+    }
+  }
+}

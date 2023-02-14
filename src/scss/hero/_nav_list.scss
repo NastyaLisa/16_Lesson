@@ -1,0 +1,40 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+@import "../utils/templates";
+
+.nav__list{
+  display: none;
+
+  @include onTablet{
+display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 35px;
+    line-height: 19px;
+  }
+
+  @include onDesctop{
+  display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 80px;
+    line-height: 19px;
+    padding-top: 18px;
+  }
+
+
+}
+
+.nav__link{
+  @include onTablet{
+    &:hover{
+     color: $colorAccent;
+    cursor: pointer;
+    }
+  }
+  @include onDesctop{
+    &:hover{
+     color:$colorAccent;
+      cursor: pointer;
+    }
+  
+  }
+}

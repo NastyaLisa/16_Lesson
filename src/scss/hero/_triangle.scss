@@ -1,0 +1,23 @@
+@import '../utils/variables';
+@import "../utils/mixin";
+
+.triangle{
+	// display: none;
+
+  @include onDesctop{
+		
+position: absolute;
+top: 710px;
+left: 1300px;
+	width: 50px;
+	height: 50px;
+  z-index: 3;
+}
+}
+.triangle__down {
+@include onDesctop{
+	@include triangleDown($width, $colorAccent)
+
+
+}
+}

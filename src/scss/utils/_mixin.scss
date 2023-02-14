@@ -1,0 +1,18 @@
+@mixin onTablet{
+@media screen and (min-width: 481px) and (max-width: 992px){
+    @content;
+}
+}
+
+@mixin onDesctop{
+@media screen and (min-width: 993px){
+    @content;
+}
+}
+
+@mixin triangleDown($width, $color){
+
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: $width solid $color;
+}

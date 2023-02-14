@@ -1,0 +1,66 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
+.header__lang {
+  display: none;
+
+  @include onDesctop {
+    display: flex;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 18px;
+  }
+}
+
+.lang {
+  color: $colorMain;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+
+  @include onTablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include onDesctop {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.lang__UA {
+  font-weight: 600;
+  margin-right: 18px;
+
+  @include onTablet {
+    margin-right: 20px;
+  }
+
+  &::after {
+    content: "|";
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    font-size: 18px;
+    color: $colorMain;
+  }
+
+  @include onTablet {
+    &::after {
+      left: 34px;
+      font-size: 20px;
+    }
+  }
+
+  @include onDesctop {
+    &::after {
+      left: 37px;
+      font-size: 20px;
+    }
+  }
+
+  @include onDesctop {
+    margin-right: 24px;
+  }
+}

@@ -1,0 +1,185 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+@import "../utils/templates";
+
+.services {
+  max-width: 400px;
+  height: 100%;
+  position: relative;
+  @extend %sectionMargin;
+
+  @include onTablet {
+    max-width: 760px;
+  }
+  @include onDesctop {
+    max-width: 1020px;
+    margin-top: 60px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    row-gap: 15px;
+    margin: 20px auto 0;
+    max-width: 400px;
+    @include onTablet {
+      grid-template-columns: repeat(2, 320px);
+      row-gap: 25px;
+      margin: 30px auto 0;
+      max-width: 760px;
+    }
+    @include onDesctop {
+      grid-template-columns: repeat(2, 505px);
+      row-gap: 40px;
+      margin: 60px auto 0;
+      max-width: 1010px;
+    }
+  }
+}
+
+.services__item {
+  &__accent {
+    align-items: flex-end;
+    color: $colorAccent;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 5px;
+    @include onTablet {
+      font-size: 16px;
+    }
+    @include onDesctop {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 5px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    @include onTablet {
+      font-size: 14px;
+    }
+    @include onDesctop {
+      font-size: 16px;
+      line-height: 19px;
+      white-space: pre-line;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.services__1,
+.services__3,
+.services__5 {
+  text-align: right;
+}
+
+.services__2,
+.services__4,
+.services__6 {
+  text-align: left;
+}
+
+.services__1 {
+  margin-right: 40px;
+  @include onTablet {
+    margin-right: 50px;
+  }
+  @include onDesctop {
+    margin-right: 161px;
+  }
+}
+
+.services__2 {
+  margin-left: 40px;
+  @include onTablet {
+    margin-left: 50px;
+  }
+  @include onDesctop {
+    margin-left: 161px;
+  }
+}
+
+.services__3 {
+  margin-right: 55px;
+  @include onTablet {
+    margin-right: 75px;
+  }
+  @include onDesctop {
+    margin-right: 215px;
+  }
+}
+
+.services__4 {
+  margin-left: 55px;
+  @include onTablet {
+    margin-left: 75px;
+  }
+  @include onDesctop {
+    margin-left: 215px;
+  }
+}
+
+.services__5 {
+  margin-top: 10px;
+  margin-right: 18px;
+  @include onTablet {
+    margin-right: 30px;
+  }
+  @include onDesctop {
+    margin-right: 118px;
+  }
+}
+
+.services__6 {
+  margin-top: 10px;
+  margin-left: 18px;
+  @include onTablet {
+    margin-left: 30px;
+  }
+  @include onDesctop {
+    margin-left: 118px;
+  }
+}
+
+.services__odd {
+  @include onDesctop {
+    transform: translate(0, 0);
+    animation-delay: 3s;
+    animation-name: services__odd;
+    animation-duration: 3s;
+    opacity: 1;
+
+    @keyframes services__odd {
+      from {
+        transform: translate(-50%, -20%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.services__even {
+  @include onDesctop {
+    transform: translate(0, 0);
+    animation-delay: 3s;
+    animation-name: services__even;
+    animation-duration: 3s;
+    opacity: 1;
+
+    @keyframes services__even {
+      from {
+        transform: translate(50%, 20%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
+}

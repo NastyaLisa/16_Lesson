@@ -1,0 +1,128 @@
+@import 'utils/normalize';
+@import 'utils/variables';
+@import'utils/templates';
+@import 'utils/mixin';
+
+
+
+
+@font-face {
+  font-family: "SofiaSans";
+  src: url("../fonts/SofiaSans.woff") format("woff"),
+    url("../fonts/SofiaSans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+
+  @include onTablet{
+    font-size: 16px;
+  }
+  @include onDesctop{
+    font-size: 16px;
+  }
+}
+.container {
+  display: grid;
+  margin: 0 auto;
+  max-width: 480px;
+  position: relative;
+  @include onTablet{
+    max-width: 992px;
+}
+@include onDesctop{
+  max-width: 1400px;
+}
+}
+
+/* section class="hero" */
+.hero {
+  background-image: url(../img/main/backgroud_mobile.png);
+  background-size: cover;
+  background-position: center;
+  height: 568px;
+
+  @include onTablet{
+     background-image: url("../img/main/background.png");
+    height: 400px;
+  }
+  @include onDesctop{
+     background-image: url("../img/main/background.png");
+    height: 663px;
+    max-width: 1400px;
+  }
+}
+
+/*header*/
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto 0;
+  position: relative;
+
+  @include onTablet{
+    justify-content: space-evenly;
+    align-items: flex-start;
+    max-width: 870px;
+}
+@include onDesctop{
+  justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1180px;
+}
+}
+.logo__text,
+.button__link_accent,
+.title__accent {
+ @extend %textAccentColor;
+}
+
+@import 'hero/header_logo';
+
+@import 'hero/nav_list';
+
+@import 'hero/contact';
+
+@import 'hero/burger';
+
+@import 'hero/header_lang';
+
+/*about*/
+@import'hero/about';
+
+@import 'hero/about_buttons';
+
+@import 'hero/lady';
+
+@import'hero/triangle';
+
+/*benefit*/
+@import 'benefit/benefit';
+
+/*features*/
+@import 'features/features';
+
+/* <section class="services"> */
+@import 'services/services_item';
+
+@import 'services/services_dot';
+
+@import 'services/services_atention';
+
+/* section class="form__inner"> */
+@import 'form_inner/form_inner';
+@import 'form_inner/form';
+
+/* <section class="clients"> */
+@import 'clients/clients';
+
+/*Footer*/
+@import 'footer/footer';
+@import 'footer/left_part';
+@import 'footer/right_part';
+

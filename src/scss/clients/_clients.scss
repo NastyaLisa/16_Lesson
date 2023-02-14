@@ -1,0 +1,38 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+@import "../utils/templates";
+
+.clients {
+  @extend %sectionMargin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include onTablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    justify-content: center;
+  }
+  @include onDesctop {
+    flex-direction: row;
+    column-gap: 69px;
+  }
+  &__img {
+    width: 280px;
+    height: 128px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    @include onDesctop {
+      margin-bottom: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
+      @include onTablet {
+        margin-bottom: 30px;
+      }
+      @include onDesctop {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

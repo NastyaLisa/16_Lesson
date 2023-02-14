@@ -1,0 +1,177 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+@import "../utils/templates";
+
+.features {
+  max-width: 480px;
+ @extend %sectionMargin;
+
+  @include onTablet {
+    max-width: 600px;
+  
+  }
+  @include onDesctop {
+    max-width: 1020px;
+    margin-top: 148px;
+  
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    text-align: center;
+    max-width: 360px;
+    margin: 5px auto 0;
+    @include onTablet {
+      max-width: 580px;
+    }
+    @include onDesctop {
+      max-width: 615px;
+      margin: 5px auto 0;
+      white-space: unset;
+      font-size: 16px;
+    }
+  }
+}
+
+.title {
+  @extend %title;
+
+}
+
+.feature__items {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  row-gap: 15px;
+  background-color: $backgroundColorFeatures;
+  border-radius: 12px;
+  padding: 15px 0;
+  margin: 15px auto 0;
+  justify-content: space-evenly;
+  width: 400px;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 250px);
+    row-gap: 20px;
+    width: 600px;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  @include onDesctop {
+    grid-template-columns: repeat(3, 300px);
+    row-gap: 12px;
+    width: 1020px;
+    padding: 16px 0;
+    margin-top: 50px;
+    justify-content: space-around;
+    max-width: 1020px;
+  }
+}
+
+.feature__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 5px 5px 0;
+  background-color: $backgroundColor;
+
+  @include onTablet {
+    height: 165px;
+  }
+
+  @include onDesctop {
+    height: 176px;
+  }
+
+  &__accent {
+    display: flex;
+    color: $colorAccent;
+    text-align: left;
+    font-size: 13px;
+    margin: 5px 0;
+
+    @include onTablet {
+      align-items: flex-end;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      margin: 10px;
+    }
+
+    @include onDesctop {
+        align-items: flex-end;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 10px;
+    }
+
+    span{
+
+    &:first-child {
+      font-size: 25px;
+      padding-right: 10px;
+
+      @include onTablet {
+        font-size: 30px;
+        line-height: 47px;
+        font-weight: 400;
+      }
+
+      @include onDesctop {
+        font-size: 40px;
+        line-height: 47px;
+      }
+    }
+  }
+  }
+
+  .feature__text {
+    text-align: left;
+    margin: 5px 0 5px 0;
+    @include onTablet {
+      font-size: 14px;
+      line-height: 19px;
+      margin: 5px 10px 0 10px;
+    }
+    @include onDesctop {
+      line-height: 19px;
+      margin: 5px 13px 0 10px;
+    }
+  }
+}
+
+.block__1 {
+  @include onDesctop {
+    order: 0;
+  }
+}
+
+.block__2 {
+  @include onDesctop {
+    order: 3;
+  }
+}
+
+.block__3 {
+  @include onDesctop {
+    order: 1;
+  }
+}
+
+.block__4 {
+  @include onDesctop {
+    order: 4;
+  }
+}
+
+.block__5 {
+  @include onDesctop {
+    order: 2;
+  }
+}
+
+.block__6 {
+  @include onDesctop {
+    order: 5;
+  }
+}

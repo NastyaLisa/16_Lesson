@@ -1,0 +1,43 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
+.contact {
+  position: relative;
+
+  @include onDesctop {
+    padding-top: 16px;
+    padding-left: 5px;
+  }
+
+  &__number {
+    color: $colorMain;
+    line-height: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: -20px;
+      width: 13px;
+      height: 13px;
+      background-image: url("../img/main/phone.svg");
+      background-size: contain;
+        @include onTablet {
+      top: 2px;
+      width: 15px;
+      height: 15px;
+    }
+    @include onDesctop {
+      top: 18px;
+      left: -20px;
+      width: 18px;
+      height: 18px;
+    }
+    }
+    &:hover {
+      color: $colorAccent;
+      cursor: pointer;
+    }
+  
+  }
+}

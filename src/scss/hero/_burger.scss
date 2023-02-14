@@ -1,0 +1,61 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
+.burger {
+  transition: 0.3s;
+
+  @include onTablet {
+    display: none;
+  }
+  @include onDesctop {
+    display: none;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 103px;
+    height: 1px;
+    width: 15px;
+    background: $colorMain;
+    transition: 0s 0.2s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $colorMain;
+      content: "";
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
+    }
+    &::before {
+      top: -5px;
+      transition-property: background-color, top, transform;
+    }
+    &::after {
+      bottom: -5px;
+      transition-property: background-color, bottom, transform;
+    }
+  }
+
+  &:focus {
+    span {
+      background: none;
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+        background-color: $colorAccent;
+        transition-delay: 0s, 0.2s;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        background-color: $colorAccent;
+        transition-delay: 0s, 0.2s;
+      }
+    }
+  }
+}

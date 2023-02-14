@@ -1,0 +1,66 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
+.lady {
+  @include onTablet {
+    margin-top: 0;
+    margin-left: 0;
+    position: relative;
+  }
+
+  @include onDesctop {
+    margin-top: 0;
+    margin-left: 0;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    width: 208px;
+    height: 174px;
+    bottom: calc(100% - 568px);
+    right: calc(50% - 104px);
+    z-index: 2;
+
+    @include onTablet {
+      width: 250px;
+      height: 208px;
+      bottom: calc(100% - 34px);
+      right: calc(50% - 343px);
+    }
+
+    @include onDesctop {
+      width: 572px;
+      height: 463px;
+      bottom: calc(100% - 145px);
+      right: calc(50% - 630px);
+    }
+  }
+}
+
+.elipse {
+  width: 113px;
+  height: 191px;
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% - 568px);
+  right: calc(50% - 91px);
+  background: $backgroundColor;
+  filter: blur(60px);
+  transform: rotate(-3.98deg);
+
+  @include onTablet {
+    width: 136px;
+    height: 230px;
+    bottom: calc(100% - 34px);
+    right: calc(50% - 318px);
+  }
+
+  @include onDesctop {
+    width: 310px;
+    height: 510.48px;
+    bottom: calc(100% - 145px);
+    right: calc(50% - 603px);
+  }
+
+}

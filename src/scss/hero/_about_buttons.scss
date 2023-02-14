@@ -1,0 +1,63 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+  margin: 48px auto 0;
+  justify-content: center;
+
+  @include onTablet {
+    justify-content: flex-start;
+    column-gap: 90px;
+    margin: 25px 0 0;
+  }
+  @include onDesctop {
+    justify-content: flex-start;
+    column-gap: 120px;
+    margin-top: 48px;
+  }
+}
+
+.button {
+  width: 100px;
+  height: 35px;
+  padding: 7px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 8px;
+
+  @include onTablet {
+    width: 150px;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  @include onDesctop {
+    width: 180px;
+    height: 60px;
+    font-size: 19px;
+    padding-top: 16px;
+  }
+}
+
+.button__accent {
+  background: linear-gradient(97.59deg, #46b1de 9.8%, #0591cc 95.1%);
+  box-shadow: 0px 2px 10px #46b1de;
+}
+
+.button__link_white {
+  color: $backgroundColor;
+}
+
+.button__white {
+  background:$backgroundColor;
+  mix-blend-mode: normal;
+  border: 1px solid #dde0dc;
+  box-shadow: 0px 2px 10px #dde0dc;
+}
